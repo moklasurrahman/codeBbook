@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { FilterProvider } from './context';
+import { ToastContainer} from 'react-toastify';
+import { CartProvider } from './context/cartContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <CartProvider>
+      <FilterProvider>
+        <ToastContainer position="top-right" closeButton={false}/>
+        <App />  
+      </FilterProvider>
+    </CartProvider>
   </React.StrictMode>
 );
 
