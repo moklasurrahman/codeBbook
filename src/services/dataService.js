@@ -24,7 +24,8 @@ export const getUser = async () => { // getUser going to cart `checkout page and
 
 
   if(!response.ok){
-    throw { message: response.statusText, status: response.status }; //eslint-disable-line
+    // eslint-disable-next-line no-throw-literal
+    throw { message: response.statusText, status: response.status };
   }
 
   const data = await response.json();
@@ -60,7 +61,8 @@ export const createOrder = async (cartList, total, user) => { // going to cartCh
   const response = await fetch(`${process.env.REACT_APP_API_URL}/660/orders`, requestOptions);
 
   if(!response.ok){
-    throw { message: response.statusText, status: response.status }; //eslint-disable-line
+    // eslint-disable-next-line no-throw-literal
+    throw { message: response.statusText, status: response.status };
   }
 
   const data = await response.json();
@@ -84,7 +86,8 @@ export const getUserOrders = async () => { //going to dashbordPage
     const response = await fetch(`${process.env.REACT_APP_API_URL}/660/orders?user.id=${browserData.cbid}`, requestOptions);
 
     if(!response.ok){
-      throw { message: response.statusText, status: response.status }; //eslint-disable-line
+      // eslint-disable-next-line no-throw-literal
+      throw { message: response.statusText, status: response.status };
     }
 
       const data = await response.json();

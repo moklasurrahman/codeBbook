@@ -4,9 +4,6 @@ import { logout } from '../../services/authService'
 import { useEffect } from 'react';
 import { getUser } from '../../services/dataService';
 
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-      
 
 const DropdownLogin = ({setDropdown}) => { //setDropdown coming from DropdownLogin and logout
 
@@ -23,6 +20,7 @@ const DropdownLogin = ({setDropdown}) => { //setDropdown coming from DropdownLog
       
     }
     fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import StarIcon from '@mui/icons-material/Star';
-import { Article } from '@mui/icons-material';
 
 export const Rating = ({rating}) => {
 

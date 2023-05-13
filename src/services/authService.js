@@ -9,7 +9,8 @@ export const login = async (authDetail) =>{
       const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, requestOptions);
      
       if(!response.ok){
-        throw { message: response.statusText, status: response.status }; //eslint-disable-line
+        // eslint-disable-next-line no-throw-literal
+        throw { message: response.statusText, status: response.status };
       }
 
       const data = await response.json();
@@ -34,7 +35,8 @@ export const signup = async (authDetail) => {
       const response = await fetch(`${process.env.REACT_APP_API_URL}/register`, requestOptions);
       
       if(!response.ok){
-        throw { message: response.statusText, status: response.status }; //eslint-disable-line
+        // eslint-disable-next-line no-throw-literal
+        throw { message: response.statusText, status: response.status };
       }
 
       const data = await response.json();
