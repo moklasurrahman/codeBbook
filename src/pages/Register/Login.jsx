@@ -29,8 +29,27 @@ const Login = () => {
         toast.error(error.message, {closeButton: true, position: "top-center" });
 
     }
+    }
 
-    
+
+    const handleLoginGest = async()=>{
+       try{
+        email.current.value = "Moklasur@gmail.com";
+        password.current.value = "12345";
+
+        const authDetail = {
+            email: email.current.value,
+            password: password.current.value
+            }
+
+        const data = await login(authDetail)
+            data.accessToken? navigate("/products") : toast.error(data);
+
+       }catch(error){
+        toast.error(error.message, {closeButton: true, position: "top-center" });
+
+       }
+
     }
 
 
@@ -55,7 +74,7 @@ const Login = () => {
                   </div>
                   <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Log in</button>
 
-                  <button type="submit" className="w-cover text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Log As a Guest</button>
+                  <button type="submit" onClick={handleLoginGest} className="w-cover text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Log As a Guest</button>
                   
               </form>
           </div>

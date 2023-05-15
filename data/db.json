@@ -283,6 +283,12 @@
       "password": "$2a$10$xyD3c6LnxKqOCi/AZG0Hdu0Ejpz5xfLgTbqE67cxY5bf4SedT9EHm",
       "name": "Taj",
       "id": 1
+    },
+    {
+      "email": "Moklasur@gmail.com",
+      "password": "$2a$10$p4gLt0J6bEFxVq7wuN.GTeGK4dbsGi9Nofr1WVvys0mZvsZwgPL/2",
+      "name": "Moklasur rahman",
+      "id": 2
     }
   ]
 }
